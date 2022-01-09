@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".activity.RegisterActivity">
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_edit"
+        android:text="返     回"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRegister1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister1" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请输入邮箱"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTel" />
+
+    <EditText
+        android:id="@+id/editTextTel"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请输入手机（用于短信验证）"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请确认密码"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <ImageView
+        android:id="@+id/imageViewPassword2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword2"
+        app:srcCompat="@mipmap/password_icon" />
+
+    <ImageView
+        android:id="@+id/imageViewAccountIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="@+id/editTextName"
+        app:srcCompat="@mipmap/account_icon" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请输入账号"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRegister1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewPassword"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
+        app:srcCompat="@mipmap/password_icon" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textedit_round"
+        android:defaultFocusHighlightEnabled="false"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <ImageView
+        android:id="@+id/imageViewTel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextTel"
+        app:srcCompat="@mipmap/tel_icon" />
+
+    <ImageView
+        android:id="@+id/imageViewEmail"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextEmail"
+        app:srcCompat="@mipmap/emeil_icon" />
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="验证码"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGetCode"
+        app:layout_constraintTop_toTopOf="@+id/buttonGetCode" />
+
+    <Button
+        android:id="@+id/buttonGetCode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="获取验证码"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <ImageView
+        android:id="@+id/imageViewCode"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/code_icon"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/buttonGetCode" />
+
+    <Button
+        android:id="@+id/buttonRegister1"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_edit"
+        android:text="注     册"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGetCode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+buildscript {
+    repositories {
+        // 1.添加MobSDK Maven地址
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+    }
+    dependencies {
+        // 2.注册MobSDK
+        classpath "com.mob.sdk:MobSDK:2018.0319.1724"
+    }
+}
+
+plugins {
+    id 'com.android.application'
+}
+
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+
+    defaultConfig {
+        applicationId "com.example.myguideapplication"
+        minSdkVersion 29
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+MobSDK {
+//    domain 'jp'
+//    appKey 'moba6b6c6d6'
+//    appSecret 'b89d2427a3bc7ad1aea1e1e8c1d36bf3'
+    appKey 'm33ebf8a933fbd'
+    appSecret '778c4b4a7ebd0088e2de278187697a41'
+
+    SMSSDK {
+        autoSMS true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'org.bouncycastle:bcprov-jdk15to18:1.68'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation "org.projectlombok:lombok:1.18.16"
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

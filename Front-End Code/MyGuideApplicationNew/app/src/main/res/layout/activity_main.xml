@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:scaleType="fitXY"
+    tools:context=".activity.MainActivity">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请输入账号"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#AFEEEE"
+        android:textColorHint="@color/smssdk_686868"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTitle" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/textedit_round"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#AFEEEE"
+        android:textColorHint="@color/smssdk_686868"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_edit"
+        android:text="登    录"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPasswordIcon"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_edit"
+        android:text="注    册"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
+        app:layout_constraintStart_toStartOf="@+id/buttonLogin"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
+    <ImageView
+        android:id="@+id/imageViewTitle"
+        android:layout_width="321dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageViewAccountIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="@+id/editTextName"
+        app:srcCompat="@mipmap/account_icon" />
+
+    <ImageView
+        android:id="@+id/imageViewPasswordIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewAccountIcon"
+        app:layout_constraintTop_toTopOf="@+id/editTextPassword"
+        app:srcCompat="@mipmap/password_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
